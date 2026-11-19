@@ -1,0 +1,9 @@
+Comparação de Soluções da Série de Fibonacci
+
+Cálculo da Complexidade de Tempo:
+Exponencial: A complexidade de tempo é de O(2^n). Como demonstrado na árvore de recursão da imagem (fib(5)), a função se ramifica em duas chamadas repetidas vezes, recalculando os mesmos valores de forma redundante.
+
+Com Programação Dinâmica (Linear):Utilizando memoization ou bottom-up, a complexidade de tempo cai drasticamente para O(n), pois cada elemento da sequência é calculado apenas uma vez e armazenado para consultas futuras instantâneas (O(1)).
+
+	Por que a solução com programação dinamica é melhor?
+Porque ela elimina o desperdício computacional gerado pelas chamadas redundantes da árvore de recursão pura. Enquanto a abordagem puramente recursiva sofre de uma explosão combinatória no número de chamadas conforme n cresce, a programação dinâmica armazena os estados já resolvidos, garantindo alta performance e eficiência de processamento.  

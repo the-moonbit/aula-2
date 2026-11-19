@@ -1,0 +1,14 @@
+Não é possível calcular diretamente o fatorial de números acima de 100 utilizando apenas uma solução recursiva simples com os tipos
+primitivos tradicionais do Java, pois existem algumas limitações que precisam ser consideradas.
+
+A primeira limitação está relacionada ao estouro de pilha (StackOverflowError). Embora o cálculo do fatorial de 100 exija aproximadamente
+100 chamadas recursivas, quantidade que normalmente é suportada pela JVM, números muito maiores podem gerar um excesso de chamadas,
+causando o estouro da pilha de execução.
+
+Outra limitação é o estouro da capacidade numérica (Overflow). No Java, o tipo long consegue armazenar valores de até 20! sem ultrapassar
+seu limite. A partir de 21!, o resultado já excede sua capacidade de armazenamento. No caso de 100!, o valor é extremamente grande,
+ultrapassando os limites dos tipos numéricos primitivos, como long e double.
+
+Portanto, para realizar esse cálculo corretamente, é necessário utilizar a classe BigInteger, disponível na biblioteca java.math, que
+permite armazenar números inteiros de grande magnitude. Além disso, é importante considerar os limites da recursividade, principalmente
+quando se trabalha com números muito elevados.
